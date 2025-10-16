@@ -24,6 +24,11 @@ jobs:
 
       - run: ls
       - run: cat docker-compose.yml
+      - name: remove all container
+        run : sudo docker rm $(docker ps -aq)
+
+      - name: remove the image
+        run: sudo docker rmi -f $(docker images -aq)
 
 
       - name: Start the deployment
@@ -35,8 +40,6 @@ jobs:
             sudo docker ps
       - name: Ip address
         run: ip addr
-      - name: remove the image
-        run: sudo docker rmi biswajit134/grocery-backend biswajit134/grocery-frontend
 
 
 
