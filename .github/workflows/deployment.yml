@@ -36,7 +36,7 @@ jobs:
       - name: Ip address
         run: ip addr
       - name: remove the image
-        run: docker rmi biswajit134/grocery-backend biswajit134/grocery-frontend
+        run: sudo docker rmi biswajit134/grocery-backend biswajit134/grocery-frontend
 
 
 
