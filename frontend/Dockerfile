@@ -1,10 +1,10 @@
-FROM node:20-alpine AS build
+FROM node:21 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
 ENV VITE_CURRENCY="$"
-ENV VITE_BASEURL="http://localhost:4000"
+ENV VITE_BASEURL="http://135.235.161.107:4000"
 RUN npm run build
 
 FROM nginx:alpine
