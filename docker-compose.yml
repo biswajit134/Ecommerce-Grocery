@@ -11,7 +11,7 @@ services:
       - grocery-networks
 
   backend:
-    image: biswajit134/grocery-backend
+    image: biswajit134/grocery-backend:latest
     container_name: backend
     depends_on:
       - mongo
@@ -21,7 +21,7 @@ services:
     networks:
       - grocery-networks
   frontend:
-    image: biswajit134/grocery-frontend
+    image: biswajit134/grocery-frontend:latest
     container_name: frontend
     depends_on:
       - backend
