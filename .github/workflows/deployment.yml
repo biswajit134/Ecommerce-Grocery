@@ -8,7 +8,7 @@ on:
     workflow_dispatch:
 
 jobs:
-  build:
+  docker-setup:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,3 +21,20 @@ jobs:
 
       - name: Print pwd
         run: echo "$(pwd)"
+
+      - run: ls
+      - run: cat docker-compose.yml
+
+
+      - name: Start the deployment
+        run: sudo docker-compose up -d
+
+      - name: See all the containers
+        run: |
+            sudo docker images
+            sudo docker ps
+
+
+
+
+      
