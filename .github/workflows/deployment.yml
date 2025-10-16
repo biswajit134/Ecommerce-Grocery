@@ -27,7 +27,7 @@ jobs:
 
 
       - name: Start the deployment
-        run: sudo docker-compose up -d
+        run: sudo docker compose up -d
 
       - name: See all the containers
         run: |
