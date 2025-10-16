@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
       <p>{product.weight}</p>
       <Link to={`/product/${product._id}`} className="cursor-pointer">
         <img
-          src={`http://localhost:4000/uploads/${product.images[0]}`}
+          src={`http://135.235.161.107:4000/uploads/${product.images[0]}`}
           alt=""
         />
       </Link>

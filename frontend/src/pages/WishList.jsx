@@ -21,7 +21,7 @@ const WishList = () => {
               <div className="grid grid-cols-3 items-center mb-4">
                 <div>
                   <img
-                    src={`http://localhost:4000/uploads/${item.images[0]}`}
+                    src={`http://135.235.161.107:4000/uploads/${item.images[0]}`}
                     alt=""
                     className="w-20 h-20"
                   />
