@@ -24,6 +24,10 @@ jobs:
 
       - run: ls
       - run: cat docker-compose.yml
+
+      - name: docker compose down
+        run: sudo docker compose down
+        
       - name: remove all container
         run : sudo docker rm -f $(docker ps -aq)
 
