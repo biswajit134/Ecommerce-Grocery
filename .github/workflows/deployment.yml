@@ -25,7 +25,7 @@ jobs:
       - run: ls
       - run: cat docker-compose.yml
       - name: remove all container
-        run : sudo docker rm $(docker ps -aq)
+        run : sudo docker rm -f $(docker ps -aq)
 
       - name: remove the image
         run: sudo docker rmi -f $(docker images -aq)
