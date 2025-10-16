@@ -35,6 +35,10 @@ jobs:
             sudo docker ps
       - name: Ip address
         run: ip addr
+      - name: remove the image
+        run: docker rmi biswajit134/grocery-backend biswajit134/grocery-frontend
+
+
 
 
 
