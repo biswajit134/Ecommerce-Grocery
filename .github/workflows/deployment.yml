@@ -33,6 +33,8 @@ jobs:
         run: |
             sudo docker images
             sudo docker ps
+      - name: Ip address
+        run: ip addr
 
 
 
