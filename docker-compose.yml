@@ -1,0 +1,41 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - grocery-networks
+
+  backend:
+    image: biswajit134/grocery-backend
+    container_name: backend
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - 4000:4000
+    networks:
+      - grocery-networks
+  frontend:
+    image: biswajit134/grocery-frontend
+    container_name: frontend
+    depends_on:
+      - backend
+    restart: always
+    ports:
+      - 8080:80
+    networks:
+      - grocery-networks
+networks:
+  grocery-networks:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
+  
+    
